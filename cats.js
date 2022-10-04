@@ -54,7 +54,7 @@ const cats = [
         age: 10,
         good_with_cats: "Yes",
         good_with_dogs: "No",
-        temperament: "",
+        temperament: ["Intelligent", "Curious", "Sociable", "Affectionate"],
         good_with_kids: "Yes",
         good_with_elderly: "Yes",
         good_with_strangers: "Yes",
