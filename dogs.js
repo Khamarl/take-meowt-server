@@ -69,4 +69,4 @@ const dogs = [
     }
 ]
 
-module.exports = { dogs }
+module.exports =  dogs;
