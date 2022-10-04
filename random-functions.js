@@ -12,8 +12,24 @@ function randomBoolean() {
     return Math.random < 0.5;
 }
 
+function randomIndices(arr, n) {
+    result = [];
+    for (let i = 0; i < n; i++) {
+        while (true) {
+            let randIndex = randomIndex(arr);
+            if (! temperament.includes(arr[randIndex])) {
+                result.push(randIndex);
+                break;
+            }
+        }
+    }
+
+    return result;
+}
+
 module.exports = {
     randomIndex,
     randomInteger,
-    randomBoolean
+    randomBoolean,
+    randomIndices
 }
