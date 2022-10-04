@@ -169,3 +169,5 @@ function generateRandomDog() {
         health_status
     }
 }
+
+module.exports = { generateRandomDog }
