@@ -37,10 +37,6 @@ app.get('/dogs/:id', (req, res) => {
   try {
     const id = parseInt(req.params.id);
 
-    if (isNaN(id)) {
-      throw 'Not a valid input';
-    } else if (id < 0 || id >= dogs.length) {
-      throw 'Index out of range';
     }
 
     res.send(dogs[id]);
@@ -59,10 +55,6 @@ app.get('/cats/:id', (req, res) => {
   try {
     const id = parseInt(req.params.id);
 
-    if (isNaN(id)) {
-      throw 'Not a valid input';
-    } else if (id < 0 || id >= cats.length) {
-      throw 'Index out of range';
     }
 
     res.send(cats[id]);
