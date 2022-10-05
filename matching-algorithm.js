@@ -10,14 +10,39 @@ function petMatchingAlgorithm(animal, formData) {
     let score = 0;
     const userBirthday = new Date(formData.birthDate);
     const userAge = Math.trunc((new Date() - userBirthday) / (1000 * 60 * 60 * 24 * 365)); // convert age to years
-    
+
     if (userAge >= 60) {
         score += animal.good_with_elderly ? 0.7 : 0.1;
     } else {
         score += 0.5;
     }
-    console.log(score)
+
+    const userLocation = formData.location;
+    if (userLocation === "city") {
+        score += animal.good_with_strangers ? 0.6 : 0.4;
+        score += (animal.health_status === "Healthy") ? 0.5 : 0.7
+    } else if (userLocation === "town") {
+        score += animal.good_with_strangers ? 0.55 : 0.45;
+        score += (animal.health_status === "Healthy") ? 0.5 : 0.6
+    } else if (userLocation === "countryside") {
+        score += 0.5
+        score += (animal.health_status === "Healthy") ? 0.6 : 0.4
+    }
+
+    return score
 }
 
-petMatchingAlgorithm({good_with_elderly: false}, {birthDate: "1940-10-04"})
+testDog = {
+    good_with_elderly: false,
+    good_with_strangers: true,
+    health_status: "Healthy"
+}
 
+testUser = {
+    birthDate: "1940-10-04",
+    location: "city"
+}
+
+let finalScore = petMatchingAlgorithm(testDog, testUser)
+
+console.log(finalScore)
