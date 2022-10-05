@@ -113,6 +113,7 @@ function petMatchingAlgorithm(animal, formData) {
     animal.temperament.forEach(trait => score += temperamentScoreGrid[trait][userAccomodation]);
 
     const userHouseOccupancy = formData.housemates;
+    // needs temperament addition
     if (userHouseOccupancy < 4){
         if (animal.health_status === 'Healthy'){
             score += animal.independent ? 0.65 : 0.35
@@ -124,6 +125,7 @@ function petMatchingAlgorithm(animal, formData) {
     }
 
     const userChildren = formData.children;
+    // needs temperament addition
     if (userChildren > 0){
         score += animal.good_with_kids ? 0.7 : 0.1
     } else {
@@ -143,6 +145,7 @@ function petMatchingAlgorithm(animal, formData) {
     // values need to be added in dogs.js file directly
 
     const userWork = formData.work_home;
+    // needs temperament addition
     if (userWork === 'Yes'){
         if (animal.health_status === 'Healthy'){
             score += animal.independent ? 0.3 : 0.6;
@@ -158,7 +161,7 @@ function petMatchingAlgorithm(animal, formData) {
     }
 
     const userPrevExperience = formData.dog_experience;
-
+    // needs temperament addition
     if (userPrevExperience === 'Yes'){
         score += (animal.health_status === 'Healthy') ? 0.5 : 0.8;
     } else {
@@ -166,6 +169,7 @@ function petMatchingAlgorithm(animal, formData) {
     }
 
     const userCurrentPets = formData.number_of_pets;
+    // needs temperament addition
     if (userCurrentPets > 0){
         score += animal.good_with_cats ? 0.6 : 0.3;
         score += animal.good_with_dogs ? 0.6 : 0.3;
@@ -178,6 +182,13 @@ function petMatchingAlgorithm(animal, formData) {
         score += animal.hypoallergenic ? 0.7 : 0.1;
     } else {
         score += 0.5;
+    }
+
+    const userDogMedication = formData.data_allergy;
+    if (userDogMedication === 'Yes'){
+        score += (animal.health_status === 'Healthy') ? 0.5 : 0.7
+    } else {
+        score += (animal.health_status === 'Healthy') ? 0.7 : 0.3
     }
 
     return score
