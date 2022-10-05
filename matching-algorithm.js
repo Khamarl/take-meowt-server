@@ -92,6 +92,26 @@ function petMatchingAlgorithm(animal, formData) {
         score += (animal.health_status === "Healthy") ? 0.6 : 0.4
     }
 
+    const userAccomodation = formData.accomodation;
+    if (animal.size === "Large") {
+        if (userAccomodation === "house-garden" || userAccomodation === "house-no-garden") {
+            score += 0.8;
+        } else if (userAccomodation === "apartment") {
+            score += 0.5;
+        } else {
+            score += 0.2
+        }
+    } else {
+        if (userAccomodation === "house-garden" || userAccomodation === "house-no-garden") {
+            score += 0.7;
+        } else if (userAccomodation === "apartment") {
+            score += 0.6;
+        } else {
+            score += 0.5
+        }
+    }
+    animal.temperament.forEach(trait => score += temperamentScoreGrid[trait][userAccomodation]);
+
     return score
 }
 
