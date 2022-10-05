@@ -11,6 +11,7 @@
 //     independent: "",
 //     hypoallergenic: ,
 //     health_status: "",
+//     weekly_exercise_needed: "[0, 3.5)", "[3.5, 7)", "[7, 10.5)", "[10.5, 14)"
 // }
 
 // TODO Define all the dog properties and their possible values
@@ -38,7 +39,8 @@ const dogs = [
         good_with_strangers: true,
         independent: true,
         hypoallergenic: false,
-        health_status: "Healthy"
+        health_status: "Healthy",
+        weekly_exercise_needed: "[0, 3.5)"
     }, {
         id: 1,
         type: "dog",
@@ -56,7 +58,8 @@ const dogs = [
         good_with_strangers: false,
         independent: false,
         hypoallergenic: true,
-        health_status: "Healthy"
+        health_status: "Healthy",
+        weekly_exercise_needed: "[3.5, 7)"
     }, {
         id: 2,
         type: "dog",
@@ -74,7 +77,8 @@ const dogs = [
         good_with_strangers: true,
         independent: true,
         hypoallergenic: false,
-        health_status: "Diabetic"
+        health_status: "Diabetic",
+        weekly_exercise_needed: "[7, 10.5)"
     }
 ]
 
