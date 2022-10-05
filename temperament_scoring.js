@@ -191,6 +191,49 @@ const temperamentWFHScoreGrid = {
     }
 }
 
+const temperamentExpScoreGrid = {
+    "Active": {
+        "Yes": 0.6,
+        "No": 0.3
+    },
+    "Intelligent": {
+        "Yes": 0.5,
+        "No": 0.6
+    },
+    "Playful": {
+        "Yes": 0.6,
+        "No": 0.4
+    },
+    "Curious": {
+        "Yes": 0.6,
+        "No": 0.5
+    },
+    "Loyal": {
+        "Yes": 0.5,
+        "No": 0.7
+    },
+    "Friendly": {
+        "Yes": 0.5,
+        "No": 0.8
+    },
+    "Sociable": {
+        "Yes": 0.5,
+        "No": 0.8
+    },
+    "Affectionate": {
+        "Yes": 0.5,
+        "No": 0.8
+    },
+    "Energetic": {
+        "Yes": 0.7,
+        "No": 0.4
+    },
+    "Lively": {
+        "Yes": 0.7,
+        "No": 0.4
+    }
+}
+
 const temperamentPetNumScoreGrid = {
     "Active": {
         "=0": 0.45,
