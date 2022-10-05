@@ -1,5 +1,4 @@
-// helper functions to generate random outputs for primitive types and lists
-
+// random functions to generate random outputs for primitive types and lists
 function randomIndex(arr) {
     return Math.floor(Math.random * arr.length);
 }
