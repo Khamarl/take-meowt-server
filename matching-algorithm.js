@@ -6,6 +6,69 @@
 
 // TODO Return the filtered and sorted list
 
+const temperamentScoreGrid = {
+    "Active": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.5,
+        "apartment": 0.25,
+        "studio": 0.25
+    },
+    "Intelligent": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.75,
+        "apartment": 0.75,
+        "studio": 0.75
+    },
+    "Playful": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.5,
+        "apartment": 0.5,
+        "studio": 0.5
+    },
+    "Curious": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.75,
+        "apartment": 0.5,
+        "studio": 0.5
+    },
+    "Loyal": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.75,
+        "apartment": 0.75,
+        "studio": 0.75
+    },
+    "Friendly": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.75,
+        "apartment": 0.75,
+        "studio": 0.75
+    },
+    "Sociable": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.75,
+        "apartment": 0.75,
+        "studio": 0.75
+    },
+    "Affectionate": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.75,
+        "apartment": 0.75,
+        "studio": 0.75
+    },
+    "Energetic": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.5,
+        "apartment": 0.25,
+        "studio": 0.25
+    },
+    "Lively": {
+        "house-garden": 0.75,
+        "house-no-garden": 0.5,
+        "apartment": 0.25,
+        "studio": 0.25
+    }
+}
+
 function petMatchingAlgorithm(animal, formData) {
     let score = 0;
     const userBirthday = new Date(formData.birthDate);
@@ -35,12 +98,15 @@ function petMatchingAlgorithm(animal, formData) {
 testDog = {
     good_with_elderly: false,
     good_with_strangers: true,
-    health_status: "Healthy"
+    health_status: "Healthy",
+    size: "Large",
+    temperament: ["Active", "Playful", "Curious", "Loyal"]
 }
 
 testUser = {
     birthDate: "1940-10-04",
-    location: "city"
+    location: "city",
+    accomodation: "house-no-garden"
 }
 
 let finalScore = petMatchingAlgorithm(testDog, testUser)
