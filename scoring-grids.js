@@ -276,3 +276,41 @@ const temperamentPetNumScoreGrid = {
         ">0": 0.6
     }
 }
+
+const exerciseScoreGrid = {
+    "[0, 3.5)": {
+        "rarely": 0.7,
+        "once-per-month": 0.7,
+        "few-times-month": 0.5,
+        "once-per-week": 0.5,
+        "many-per-week": 0.5,
+        "every-day": 0.5
+    },
+    "[3.5, 7)": {
+        "rarely": 0.55,
+        "once-per-month": 0.55,
+        "few-times-month": 0.65,
+        "once-per-week": 0.65,
+        "many-per-week": 0.5,
+        "every-day": 0.5
+    },
+    "[7, 10.5)": {
+        "rarely": 0.3,
+        "once-per-month": 0.3,
+        "few-times-month": 0.4,
+        "once-per-week": 0.45,
+        "many-per-week": 0.5,
+        "every-day": 0.5
+    },
+    "[10.5, 14)": {
+        "rarely": 0.2,
+        "once-per-month": 0.2,
+        "few-times-month": 0.3,
+        "once-per-week": 0.4,
+        "many-per-week": 0.7,
+        "every-day": 0.7
+    }
+}
+
+
+module.exports = { temperamentAccomScoreGrid, temperamentHouseMatesScoreGrid, temperamentChildrenScoreGrid, temperamentWFHScoreGrid, temperamentExpScoreGrid, temperamentPetNumScoreGrid, exerciseScoreGrid }
