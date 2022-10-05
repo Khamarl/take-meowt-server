@@ -112,6 +112,34 @@ function petMatchingAlgorithm(animal, formData) {
     }
     animal.temperament.forEach(trait => score += temperamentScoreGrid[trait][userAccomodation]);
 
+    const userHouseOccupancy = formData.housemates;
+    if (userHouseOccupancy < 4){
+        if (animal.health_status === 'Healthy'){
+            score += animal.independent ? 0.65 : 0.35
+        } else {
+            score += animal.independent ? 0.55 : 0.45
+        }
+    } else {
+        score += 0.5
+    }
+
+    const userChildren = formData.children;
+    if (userChildren > 0){
+        score += animal.good_with_kids ? 0.7 : 0.1
+    } else {
+        score += 0.5
+    }
+
+    const userTravel = formData.travel;
+    if (userTravel === 'Every month' || userTravel === 'Multiple times a month'){
+        if (animal.health_status === 'Healthy'){
+            score += animal.independent ? 0.7 : 0.1;
+        }
+    } else {
+       score += 0.5
+    }
+
+
     return score
 }
 
@@ -120,13 +148,18 @@ testDog = {
     good_with_strangers: true,
     health_status: "Healthy",
     size: "Large",
-    temperament: ["Active", "Playful", "Curious", "Loyal"]
+    temperament: ["Active", "Playful", "Curious", "Loyal"],
+    independent: true,
+    good_with_kids: true,
+    children: 2
 }
 
 testUser = {
     birthDate: "1940-10-04",
     location: "city",
-    accomodation: "house-no-garden"
+    accomodation: "house-no-garden", 
+    housemates: 3, 
+    travel: 'Every month'
 }
 
 let finalScore = petMatchingAlgorithm(testDog, testUser)
