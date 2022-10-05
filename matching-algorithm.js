@@ -139,6 +139,23 @@ function petMatchingAlgorithm(animal, formData) {
        score += 0.5
     }
 
+    // add condition for animal exercise needs
+    // values need to be added in dogs.js file directly
+
+    const userWork = formData.work_home;
+    if (userWork === 'Yes'){
+        if (animal.health_status === 'Healthy'){
+            score += animal.independent ? 0.3 : 0.6;
+        } else {
+            score += animal.independent ? 0.5 : 0.7;
+        }
+    } else {
+        if (animal.health_status === 'Healthy'){
+            score += animal.independent ? 0.7 : 0.5;
+        } else {
+            score += animal.independent ? 0.6 : 0.3;
+        }
+    }
 
     return score
 }
@@ -159,7 +176,8 @@ testUser = {
     location: "city",
     accomodation: "house-no-garden", 
     housemates: 3, 
-    travel: 'Every month'
+    travel: 'Every month', 
+    work_home: 'No',
 }
 
 let finalScore = petMatchingAlgorithm(testDog, testUser)
