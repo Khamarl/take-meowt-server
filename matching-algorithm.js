@@ -157,6 +157,29 @@ function petMatchingAlgorithm(animal, formData) {
         }
     }
 
+    const userPrevExperience = formData.dog_experience;
+
+    if (userPrevExperience === 'Yes'){
+        score += (animal.health_status === 'Healthy') ? 0.5 : 0.8;
+    } else {
+        score += (animal.health_status === 'Healthy') ? 0.7 : 0.4;
+    }
+
+    const userCurrentPets = formData.number_of_pets;
+    if (userCurrentPets > 0){
+        score += animal.good_with_cats ? 0.6 : 0.3;
+        score += animal.good_with_dogs ? 0.6 : 0.3;
+    } else {
+        score += 0.5;
+    }
+
+    const userAllergy = formData.dog_allergy;
+    if (userAllergy === 'Yes'){
+        score += animal.hypoallergenic ? 0.7 : 0.1;
+    } else {
+        score += 0.5;
+    }
+
     return score
 }
 
@@ -168,7 +191,8 @@ testDog = {
     temperament: ["Active", "Playful", "Curious", "Loyal"],
     independent: true,
     good_with_kids: true,
-    children: 2
+    children: 2, 
+    hypoallergenic: true
 }
 
 testUser = {
@@ -178,6 +202,9 @@ testUser = {
     housemates: 3, 
     travel: 'Every month', 
     work_home: 'No',
+    dog_experience: 'Yes', 
+    number_of_pets: 0,
+    dog_allergy: 'Yes'
 }
 
 let finalScore = petMatchingAlgorithm(testDog, testUser)
