@@ -39,7 +39,7 @@ const cats = [
         id: 2,
         type: "cat",
         gender: "female",
-        name: "Sarah"
+        name: "Sarah",
         breed: "Sphynx",
         age: 3,
         good_with_cats: true,
