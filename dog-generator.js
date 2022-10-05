@@ -1,6 +1,6 @@
 // Write a function to generate dogs with random values for each property (Optional: Restrict property values based on each other)
 
-const {randomIndex, randomInteger, randomBoolean} = require("./random-functions")
+const {randomIndex, randomInteger, randomBoolean} = require("./helper-functions")
 
 const breedList = [
     "cocker spaniel",
