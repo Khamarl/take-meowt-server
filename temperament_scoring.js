@@ -190,3 +190,46 @@ const temperamentWFHScoreGrid = {
         "No": 0.3
     }
 }
+
+const temperamentPetNumScoreGrid = {
+    "Active": {
+        "=0": 0.45,
+        ">0": 0.6
+    },
+    "Intelligent": {
+        "=0": 0.5,
+        ">0": 0.55
+    },
+    "Playful": {
+        "=0": 0.4,
+        ">0": 0.6
+    },
+    "Curious": {
+        "=0": 0.5,
+        ">0": 0.6
+    },
+    "Loyal": {
+        "=0": 0.6,
+        ">0": 0.5
+    },
+    "Friendly": {
+        "=0": 0.5,
+        ">0": 0.8
+    },
+    "Sociable": {
+        "=0": 0.3,
+        ">0": 0.7
+    },
+    "Affectionate": {
+        "=0": 0.6,
+        ">0": 0.4
+    },
+    "Energetic": {
+        "=0": 0.4,
+        ">0": 0.7
+    },
+    "Lively": {
+        "=0": 0.5,
+        ">0": 0.6
+    }
+}
