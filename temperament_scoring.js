@@ -104,3 +104,46 @@ const temperamentHouseMatesScoreGrid = {
         ">= 4": 0.65,
     }
 }
+
+const temperamentChildrenScoreGrid = {
+    "Active": {
+        "=0": 0.6,
+        ">0": 0.3
+    },
+    "Intelligent": {
+        "=0": 0.5,
+        ">0": 0.5
+    },
+    "Playful": {
+        "=0": 0.5,
+        ">0": 0.8
+    },
+    "Curious": {
+        "=0": 0.5,
+        ">0": 0.5
+    },
+    "Loyal": {
+        "=0": 0.5,
+        ">0": 0.6
+    },
+    "Friendly": {
+        "=0": 0.5,
+        ">0": 0.8
+    },
+    "Sociable": {
+        "=0": 0.5,
+        ">0": 0.7
+    },
+    "Affectionate": {
+        "=0": 0.5,
+        ">0": 0.8
+    },
+    "Energetic": {
+        "=0": 0.6,
+        ">0": 0.4
+    },
+    "Lively": {
+        "=0": 0.6,
+        ">0": 0.4
+    }
+}
