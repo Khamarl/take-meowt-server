@@ -35,13 +35,23 @@ app.post('/dogs', (req, res) => {
 
 app.get('/dogs/:id', (req, res) => {
   try {
+        
     const id = parseInt(req.params.id);
+
+    if (isNaN(id)){
+        
+        throw "Not a valid input"
+
+    } else if (id < 0 || id >= dogs.length){
+        
+        throw "Index out of range"
 
     }
 
     res.send(dogs[id]);
-  } catch (e) {
-    re.status(404).send({ error: e });
+  
+  }catch (e) {
+    res.status(404).send({ error: e });
   }
 });
 
@@ -53,13 +63,23 @@ app.get('/cats', (req, res) => {
 
 app.get('/cats/:id', (req, res) => {
   try {
+        
     const id = parseInt(req.params.id);
+
+    if (isNaN(id)){
+        
+        throw "Not a valid input"
+
+    } else if (id < 0 || id >= dogs.length){
+        
+        throw "Index out of range"
 
     }
 
-    res.send(cats[id]);
-  } catch (e) {
-    re.status(404).send({ error: e });
+    res.send(dogs[id]);
+  
+  }catch (e) {
+    res.status(404).send({ error: e });
   }
 });
 
