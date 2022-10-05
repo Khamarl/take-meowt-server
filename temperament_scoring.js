@@ -147,3 +147,46 @@ const temperamentChildrenScoreGrid = {
         ">0": 0.4
     }
 }
+
+const temperamentWFHScoreGrid = {
+    "Active": {
+        "Yes": 0.6,
+        "No": 0.3
+    },
+    "Intelligent": {
+        "Yes": 0.5,
+        "No": 0.5
+    },
+    "Playful": {
+        "Yes": 0.6,
+        "No": 0.3
+    },
+    "Curious": {
+        "Yes": 0.6,
+        "No": 0.5
+    },
+    "Loyal": {
+        "Yes": 0.6,
+        "No": 0.3
+    },
+    "Friendly": {
+        "Yes": 0.5,
+        "No": 0.5
+    },
+    "Sociable": {
+        "Yes": 0.6,
+        "No": 0.4
+    },
+    "Affectionate": {
+        "Yes": 0.6,
+        "No": 0.3
+    },
+    "Energetic": {
+        "Yes": 0.5,
+        "No": 0.4
+    },
+    "Lively": {
+        "Yes": 0.5,
+        "No": 0.3
+    }
+}
