@@ -48,7 +48,7 @@ app.get("/dogs/:id", (req, res) => {
     
     } catch (e){
 
-        re.status(404).send({error: e})
+        res.status(404).send({error: e})
         
     }
 
@@ -85,7 +85,7 @@ app.get("/cats/:id", (req, res) => {
     
     } catch (e){
 
-        re.status(404).send({error: e})
+        res.status(404).send({error: e})
         
     }
 })
