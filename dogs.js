@@ -41,7 +41,7 @@ const dogs = [
         health_status: "Healthy"
     }, {
         id: 1,
-        tyep: "dog",
+        type: "dog",
         breed: "jack russell terrier",
         gender: "female",
         name: "Heather",
