@@ -23,7 +23,10 @@
 const dogs = [
     {
         id: 0,
+        type: "dog",
         breed: "cocker spaniel",
+        gender: "female",
+        name: "Roxy",
         age: 4,
         good_with_cats: true,
         good_with_dogs: true,
@@ -38,7 +41,10 @@ const dogs = [
         health_status: "Healthy"
     }, {
         id: 1,
+        tyep: "dog",
         breed: "jack russell terrier",
+        gender: "female",
+        name: "Heather",
         age: 2,
         good_with_cats: false,
         good_with_dogs: true,
@@ -53,7 +59,10 @@ const dogs = [
         health_status: "Healthy"
     }, {
         id: 2,
+        type: "dog",
         breed: "labrador",
+        gender: "male",
+        name: "Mr. Peanutbutter",
         age: 5,
         good_with_cats: true,
         good_with_dogs: false,

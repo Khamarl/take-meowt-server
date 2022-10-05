@@ -2,6 +2,8 @@ const cats = [
     {
         id: 0,
         type: "cat",
+        gender: "male",
+        name: "Sebastian",
         breed: "Ragdoll",
         age: 5,
         good_with_cats: true,
@@ -18,6 +20,8 @@ const cats = [
     {
         id: 1,
         type: "cat",
+        gender: "male",
+        name: "Rocky",
         breed: "Devon Rex",
         age: 6,
         good_with_cats: false,
@@ -34,6 +38,8 @@ const cats = [
     {
         id: 2,
         type: "cat",
+        gender: "female",
+        name: "Sarah"
         breed: "Sphynx",
         age: 3,
         good_with_cats: true,
@@ -50,6 +56,8 @@ const cats = [
     {
         id: 3,
         type: "cat",
+        gender: "male",
+        name: "Simon",
         breed: "Scottish Fold",
         age: 10,
         good_with_cats: true,
@@ -66,6 +74,8 @@ const cats = [
     {
         id: 4,
         type: "cat",
+        gender: "male",
+        name: "Dartagnan",
         breed: "Main Coon",
         age: 8,
         good_with_cats: false,
@@ -82,6 +92,8 @@ const cats = [
     {
         id: 5,
         type: "cat",
+        gender: "female",
+        name: "Lola",
         breed: "Persian",
         age: 7,
         good_with_cats: true,
@@ -98,6 +110,8 @@ const cats = [
     {
         id: 6,
         type: "cat",
+        gender: "female",
+        name: "Mitsy",
         breed: "Burmese",
         age: 12,
         good_with_cats: true,
@@ -114,6 +128,8 @@ const cats = [
     {
         id: 7,
         type: "cat",
+        gender: "female",
+        name: "Stella",
         breed: "Cymric",
         age: 6,
         good_with_cats: false,
@@ -130,6 +146,8 @@ const cats = [
     {
         id: 8,
         type: "cat",
+        gender: "male",
+        name: "Loki",
         breed: "Colorpoint Shorthair",
         age: 13,
         good_with_cats: false,
@@ -146,6 +164,8 @@ const cats = [
     {
         id: 9,
         type: "cat",
+        gender: "female",
+        name: "Daisy",
         breed: "Bombay",
         age: 9,
         good_with_cats: true,
@@ -162,6 +182,8 @@ const cats = [
     {
         id: 10,
         type: "cat",
+        gender: "male",
+        name: "Braut",
         breed: "Norwegian Forest Cat",
         age: 12,
         good_with_cats: true,
