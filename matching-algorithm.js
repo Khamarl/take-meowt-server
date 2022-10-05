@@ -163,18 +163,18 @@ function petMatchingAlgorithm(animal, formData) {
     return score
 }
 
-testDog = {
-    good_with_elderly: false,
-    good_with_strangers: true,
-    health_status: "Healthy",
-    size: "Large",
-    temperament: ["Active", "Playful", "Curious", "Loyal"],
-    independent: true,
-    good_with_kids: true,
-    children: 2, 
-    hypoallergenic: true,
-    weekly_exercise_needed: "[7, 10.5)"
+function sortAnimals(animals, formData) {
+    // Deep copy the animal list
+    const animalsCopy = [...animals];
+    // For each animal, assign a score
+    animalsCopy.forEach(animal => animal.score = petMatchingAlgorithm(animal, formData));
+    // Sort by score, highest to lowest
+    animalsCopy.sort((a, b) => b - a);
+
+    return animalsCopy;
 }
+
+const dogs = require("./dogs");
 
 testUser = {
     birthDate: "1940-10-04",
@@ -190,6 +190,22 @@ testUser = {
     dog_allergy: 'yes'
 }
 
-let finalScore = petMatchingAlgorithm(testDog, testUser)
+console.log(sortAnimals(dogs, testUser));
 
-console.log(finalScore)
+
+// testDog = {
+//     good_with_elderly: false,
+//     good_with_strangers: true,
+//     health_status: "Healthy",
+//     size: "Large",
+//     temperament: ["Active", "Playful", "Curious", "Loyal"],
+//     independent: true,
+//     good_with_kids: true,
+//     children: 2, 
+//     hypoallergenic: true,
+//     weekly_exercise_needed: "[7, 10.5)"
+// }
+
+// let finalScore = petMatchingAlgorithm(testDog, testUser)
+
+// console.log(finalScore)
