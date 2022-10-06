@@ -152,7 +152,7 @@ const cats = [
         age: 13,
         good_with_cats: false,
         good_with_dogs: false,
-        temperament: ["Social", "Affectionate", "Intelligent", "Playful"],
+        temperament: ["Sociable", "Affectionate", "Intelligent", "Playful"],
         good_with_kids: false,
         good_with_elderly: false,
         good_with_strangers: false,

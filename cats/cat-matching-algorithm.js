@@ -24,26 +24,30 @@ function catMatchingAlgorithm(animal, formData) {
         score += (animal.health_status === "Healthy") ? 0.6 : 0.4
     }
     
-    const userAccomodation = formData.accomodation;
+    const userAccom = formData.accomodation;
     const userPets = formData.number_of_pets;
-    if(userAccomodation === "house-garden" || userAccomodation === "house-no-garden"){
+    if(userAccom === "house-garden" || userAccom === "house-no-garden"){
         if (userPets > 0){
             score += animal.good_with_cats ? 0.6 : 0.4;
             score += animal.good_with_dogs ? 0.6 : 0.4;
+            animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait][">0"]);
         } else {
             score += 0.4;
+            animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait]["=0"]);
         }
     } else {
         if (userPets > 0){
             score += animal.good_with_cats ? 0.5 : 0.3;
             score += animal.good_with_dogs ? 0.5 : 0.3;
+            animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait][">0"]);
         } else {
             score += 0.6
+            animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait]["=0"]);
         }
     }
-    animal.temperament.forEach(trait => score += temperamentAccomScoreGrid[trait][userAccomodation]);
-    animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait][userAccomodation]);
-
+   
+    animal.temperament.forEach(trait => score += temperamentAccomScoreGrid[trait][userAccom]);
+ 
     const userHouseOccupancy = formData.housemates;
 
     if (userHouseOccupancy < 4){
@@ -97,7 +101,7 @@ function catMatchingAlgorithm(animal, formData) {
         animal.temperament.forEach(trait => score += temperamentWFHScoreGrid[trait]["No"]);
     }
 
-    // console.log("After both exercise questions: ", score);
+    // // console.log("After both exercise questions: ", score);
 
     const userPrevExperience = formData.pet_experience;
    
@@ -146,7 +150,7 @@ function catMatchingAlgorithm(animal, formData) {
 }
 
 
-function sortAnimals(animals, formData) {
+function sortedAnimals(animals, formData) {
     // Deep copy the animal list
     const animalsCopy = [...animals];
     // For each animal, assign a score
@@ -173,4 +177,4 @@ testUser = {
     preference: 'yes'
 }
 
-console.log(sortAnimals(cats, testUser));
+console.log(sortedAnimals(cats, testUser));
