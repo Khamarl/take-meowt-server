@@ -2,7 +2,7 @@
 
 const path = require("path");
 
-const {randomIndex, randomElement, randomInteger, randomBoolean, randomIndices, randomFileLine } = require("../helper-functions")
+const {randomIndex, randomElement, randomInteger, randomBoolean, randomIndices, randomFileLine } = require("../../helper-functions")
 
 const breedList = [
     "cocker spaniel",
