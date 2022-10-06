@@ -24,11 +24,14 @@ const traits = [
     "docile",
     "obedience",
     "friendly",
-    "sociable",
-    "affectionate",
+    "protective",
     "energetic",
     "aggressive"
 ]
+
+//"energetic", "docile (Curious)", "friendly", "intelligent", "playful", "protective", "confident (Active)", "aggressive (Lively)", "obedience (Loyal)"
+
+
 
 const healthConditions = ["Healthy", "Diabetic", "Gingivitis"]
 

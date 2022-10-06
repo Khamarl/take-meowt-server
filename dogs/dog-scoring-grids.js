@@ -1,60 +1,57 @@
+//"energetic", "docile (Curious)", "friendly", "intelligent", "playful", "protective", "confident (Active)", "aggressive (Lively)", "obedience (Loyal)"
 
-const temperamentAccomScoreGrid = {
-    "Active": {
+
+
+const dogTemperamentAccomScoreGrid = {
+    "confident": {
         "house-garden": 0.75,
-        "house-no-garden": 0.5,
-        "apartment": 0.25,
-        "studio": 0.25
+        "house-no-garden": 0.65,
+        "apartment": 0.4,
+        "studio": 0.4
     },
-    "Intelligent": {
+    "intelligent": {
         "house-garden": 0.75,
         "house-no-garden": 0.75,
         "apartment": 0.75,
         "studio": 0.75
     },
-    "Playful": {
+    "playful": {
         "house-garden": 0.75,
         "house-no-garden": 0.5,
         "apartment": 0.5,
         "studio": 0.5
     },
-    "Curious": {
-        "house-garden": 0.75,
-        "house-no-garden": 0.75,
-        "apartment": 0.5,
-        "studio": 0.5
+    "docile": {
+        "house-garden": 0.6,
+        "house-no-garden": 0.6,
+        "apartment": 0.6,
+        "studio": 0.6
     },
-    "Loyal": {
-        "house-garden": 0.75,
-        "house-no-garden": 0.75,
-        "apartment": 0.75,
-        "studio": 0.75
-    },
-    "Friendly": {
+    "obedience": {
         "house-garden": 0.75,
         "house-no-garden": 0.75,
         "apartment": 0.75,
         "studio": 0.75
     },
-    "Sociable": {
+    "friendly": {
         "house-garden": 0.75,
         "house-no-garden": 0.75,
         "apartment": 0.75,
         "studio": 0.75
     },
-    "Affectionate": {
+    "protective": {
         "house-garden": 0.75,
         "house-no-garden": 0.75,
         "apartment": 0.75,
         "studio": 0.75
     },
-    "Energetic": {
+    "energetic": {
         "house-garden": 0.75,
         "house-no-garden": 0.5,
         "apartment": 0.25,
         "studio": 0.25
     },
-    "Lively": {
+    "aggressive": {
         "house-garden": 0.75,
         "house-no-garden": 0.5,
         "apartment": 0.25,
@@ -62,222 +59,202 @@ const temperamentAccomScoreGrid = {
     }
 }
 
-const temperamentHouseMatesScoreGrid = {
-    "Active": {
+const dogTemperamentHouseMatesScoreGrid = {
+    "confident": {
         "<4": 0.4,
         ">=4": 0.6,
     },
-    "Intelligent": {
+    "intelligent": {
        "<4": 0.5,
         ">=4": 0.5,
     },
-    "Playful": {
+    "playful": {
         "<4": 0.3,
         ">= 4": 0.7,
     },
-    "Curious": {
+    "docile": {
         "<4": 0.5,
         ">=4": 0.5,
     },
-    "Loyal": {
+    "obedience": {
        "<4": 0.5,
         ">=4": 0.5,
     },
-    "Friendly": {
+    "friendly": {
        "<4": 0.5,
         ">=4": 0.6,
     },
-    "Sociable": {
-        "<4": 0.4,
-        ">= 4": 0.7,
+    "protective": {
+       "<4": 0.6,
+        ">= 4": 0.6,
     },
-    "Affectionate": {
-       "<4": 0.4,
-        ">= 4": 0.7,
-    },
-    "Energetic": {
+    "energetic": {
         "<4": 0.4,
         ">= 4": 0.6,
     },
-    "Lively": {
-        "<4": 0.35,
-        ">= 4": 0.65,
+    "aggressive": {
+        "<4": 0.55,
+        ">= 4": 0.35,
     }
 }
 
-const temperamentChildrenScoreGrid = {
-    "Active": {
-        "=0": 0.6,
-        ">0": 0.3
-    },
-    "Intelligent": {
-        "=0": 0.5,
-        ">0": 0.5
-    },
-    "Playful": {
-        "=0": 0.5,
-        ">0": 0.8
-    },
-    "Curious": {
-        "=0": 0.5,
-        ">0": 0.5
-    },
-    "Loyal": {
-        "=0": 0.5,
+const dogTemperamentChildrenScoreGrid = {
+    "confident": {
+        "=0": 0.4,
         ">0": 0.6
     },
-    "Friendly": {
+    "intelligent": {
+        "=0": 0.5,
+        ">0": 0.5
+    },
+    "playful": {
         "=0": 0.5,
         ">0": 0.8
     },
-    "Sociable": {
+    "docile": {
         "=0": 0.5,
         ">0": 0.7
     },
-    "Affectionate": {
+    "obedience": {
+        "=0": 0.4,
+        ">0": 0.7
+    },
+    "friendly": {
         "=0": 0.5,
         ">0": 0.8
     },
-    "Energetic": {
-        "=0": 0.6,
+    "protective": {
+        "=0": 0.5,
+        ">0": 0.8
+    },
+    "energetic": {
+        "=0": 0.4,
+        ">0": 0.55
+    },
+    "aggressive": {
+        "=0": 0.65,
         ">0": 0.4
-    },
-    "Lively": {
-        "=0": 0.6,
-        ">0": 0.4
     }
 }
 
-const temperamentWFHScoreGrid = {
-    "Active": {
-        "Yes": 0.6,
-        "No": 0.3
+const dogTemperamentWFHScoreGrid = {
+    "confident": {
+        "yes": 0.55,
+        "no": 0.6
     },
-    "Intelligent": {
-        "Yes": 0.5,
-        "No": 0.5
+    "intelligent": {
+        "yes": 0.5,
+        "no": 0.5
     },
-    "Playful": {
-        "Yes": 0.6,
-        "No": 0.3
+    "playful": {
+        "yes": 0.6,
+        "no": 0.3
     },
-    "Curious": {
-        "Yes": 0.6,
-        "No": 0.5
+    "docile": {
+        "yes": 0.6,
+        "no": 0.5
     },
-    "Loyal": {
-        "Yes": 0.6,
-        "No": 0.3
+    "obedience": {
+        "yes": 0.6,
+        "no": 0.5
     },
-    "Friendly": {
-        "Yes": 0.5,
-        "No": 0.5
+    "friendly": {
+        "yes": 0.6,
+        "no": 0.5
     },
-    "Sociable": {
-        "Yes": 0.6,
-        "No": 0.4
+    "protective": {
+        "yes": 0.6,
+        "no": 0.3
     },
-    "Affectionate": {
-        "Yes": 0.6,
-        "No": 0.3
+    "energetic": {
+        "yes": 0.5,
+        "no": 0.4
     },
-    "Energetic": {
-        "Yes": 0.5,
-        "No": 0.4
-    },
-    "Lively": {
-        "Yes": 0.5,
-        "No": 0.3
+    "aggressive": {
+        "yes": 0.4,
+        "no": 0.55
     }
 }
 
-const temperamentExpScoreGrid = {
-    "Active": {
-        "Yes": 0.6,
-        "No": 0.3
+const dogTemperamentExpScoreGrid = {
+    "confident": {
+        "yes": 0.6,
+        "no": 0.3
     },
-    "Intelligent": {
-        "Yes": 0.5,
-        "No": 0.6
+    "intelligent": {
+        "yes": 0.5,
+        "no": 0.6
     },
-    "Playful": {
-        "Yes": 0.6,
-        "No": 0.4
+    "playful": {
+        "yes": 0.6,
+        "no": 0.65
     },
-    "Curious": {
-        "Yes": 0.6,
-        "No": 0.5
+    "docile": {
+        "yes": 0.5,
+        "no": 0.6
     },
-    "Loyal": {
-        "Yes": 0.5,
-        "No": 0.7
+    "obedience": {
+        "yes": 0.5,
+        "no": 0.7
     },
-    "Friendly": {
-        "Yes": 0.5,
-        "No": 0.8
+    "friendly": {
+        "yes": 0.5,
+        "no": 0.8
     },
-    "Sociable": {
-        "Yes": 0.5,
-        "No": 0.8
+    "protective": {
+        "yes": 0.6,
+        "no": 0.7
     },
-    "Affectionate": {
-        "Yes": 0.5,
-        "No": 0.8
+    "energetic": {
+        "yes": 0.7,
+        "no": 0.4
     },
-    "Energetic": {
-        "Yes": 0.7,
-        "No": 0.4
-    },
-    "Lively": {
-        "Yes": 0.7,
-        "No": 0.4
+    "aggressive": {
+        "yes": 0.7,
+        "no": 0.4
     }
 }
 
-const temperamentPetNumScoreGrid = {
-    "Active": {
+const dogTemperamentPetNumScoreGrid = {
+    "confident": {
         "=0": 0.45,
         ">0": 0.6
     },
-    "Intelligent": {
+    "intelligent": {
         "=0": 0.5,
         ">0": 0.55
     },
-    "Playful": {
+    "playful": {
         "=0": 0.4,
         ">0": 0.6
     },
-    "Curious": {
+    "docile": {
         "=0": 0.5,
         ">0": 0.6
     },
-    "Loyal": {
-        "=0": 0.6,
-        ">0": 0.5
+    "obedience": {
+        "=0": 0.5,
+        ">0": 0.6
     },
-    "Friendly": {
+    "friendly": {
         "=0": 0.5,
         ">0": 0.8
     },
-    "Sociable": {
-        "=0": 0.3,
-        ">0": 0.7
-    },
-    "Affectionate": {
+    "protective": {
         "=0": 0.6,
         ">0": 0.4
     },
-    "Energetic": {
+    "energetic": {
         "=0": 0.4,
         ">0": 0.7
     },
-    "Lively": {
-        "=0": 0.5,
-        ">0": 0.6
+    "aggressive": {
+        "=0": 0.7,
+        ">0": 0.3
     }
 }
 
-const exerciseScoreGrid = {
+const dogExerciseScoreGrid = {
     "[0, 3.5)": {
         "rarely": 0.7,
         "once-per-month": 0.7,
@@ -313,4 +290,4 @@ const exerciseScoreGrid = {
 }
 
 
-module.exports = { temperamentAccomScoreGrid, temperamentHouseMatesScoreGrid, temperamentChildrenScoreGrid, temperamentWFHScoreGrid, temperamentExpScoreGrid, temperamentPetNumScoreGrid, exerciseScoreGrid }
+module.exports = { dogTemperamentAccomScoreGrid, dogTemperamentHouseMatesScoreGrid, dogTemperamentChildrenScoreGrid, dogTemperamentWFHScoreGrid, dogTemperamentExpScoreGrid, dogTemperamentPetNumScoreGrid, dogExerciseScoreGrid }
