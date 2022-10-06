@@ -12,8 +12,8 @@ const app = express();
 
 middleSetup(app);
 
-const cats = require('./cats');
-const dogs = require('./dogs');
+const cats = require('./cats/cats');
+const dogs = require('./dogs/dogs');
 
 // Welcome page
 app.get('/', (req, res) => {
