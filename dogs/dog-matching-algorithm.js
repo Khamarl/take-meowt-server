@@ -265,7 +265,7 @@ function sortAnimals(animals, formData) { // Deep copy the animal list
     return animalsCopy;
 }
 
-const dogs = require("./dogs");
+const dogs = require("./dog_generation/dogs");
 
 testUser = {
     birthDate: "1940-10-04",
