@@ -34,7 +34,7 @@ function randomIndices(arr, n) {
 }
 
 function randomFileLine(fileName) {
-    const contents = fs.readFileSync(path.resolve(__dirname, fileName), 'utf-8');
+    const contents = fs.readFileSync(fileName, 'utf-8');
     const lines = contents.split(/\r?\n/);
 
     return lines[randomIndex(lines)];
