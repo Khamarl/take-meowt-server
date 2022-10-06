@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
 
 function middleSetup(app) {
   app.use(cors()); // Allow cross-origin requests
@@ -13,7 +14,8 @@ const app = express();
 middleSetup(app);
 
 const cats = require('./cats');
-const dogs = require('./dogs');
+const dogData = fs.readFileSync("./dog-data.txt");
+const dogs = JSON.parse(dogData);
 
 // Welcome page
 app.get('/', (req, res) => {
