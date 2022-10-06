@@ -22,6 +22,7 @@
 
 const {generateRandomDog} = require("./dog-generator")
 const fs = require("fs")
+const path = require("path");
 
 // const dogs = [
 //     {
@@ -93,6 +94,6 @@ for (let i = 0; i<50; i++) {
 
 const dogData = JSON.stringify(dogs);
 
-fs.writeFileSync("dog-data.txt", dogData);
+fs.writeFileSync(path.resolve(__dirname, "./dog-data.txt"), dogData);
 
 module.exports = dogs;

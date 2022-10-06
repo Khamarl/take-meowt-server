@@ -1,4 +1,5 @@
-const {readFileSync} = require("fs");
+const fs = require("fs");
+const path = require("path")
 
 // random functions to generate random outputs for primitive types and lists
 function randomIndex(arr) {
@@ -33,7 +34,7 @@ function randomIndices(arr, n) {
 }
 
 function randomFileLine(fileName) {
-    const contents = readFileSync(fileName, 'utf-8');
+    const contents = fs.readFileSync(path.resolve(__dirname, fileName), 'utf-8');
     const lines = contents.split(/\r?\n/);
 
     return lines[randomIndex(lines)];
