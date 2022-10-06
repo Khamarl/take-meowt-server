@@ -15,6 +15,8 @@ middleSetup(app);
 const cats = require('./cats/cats');
 const dogs = require('./dogs/dogs');
 
+const sortedList = require('./dogs/dog-matching-algorithm') 
+
 // Welcome page
 app.get('/', (req, res) => {
   res.send(
@@ -30,7 +32,9 @@ app.get('/dogs', (req, res) => {
 
 app.post('/dogs', (req, res) => {
   console.log(req.body);
-  res.status(200).send(req.body);
+  const sortedDogs = sortedList(dogs, req.body);
+  res.status(200).send(sortedDogs);
+  console.log(sortedDogs);
 });
 
 app.get('/dogs/:id', (req, res) => {

@@ -18,7 +18,8 @@
 
 // TODO Call dog generator function and save the results to file
 
-// TODO "Active", "Intelligent", "Playful", "Curious", "Loyal", "Friendly", "Sociable", "Affectionate", "Energetic", "Lively"
+// TODO "energetic", "docile", "friendly", "intelligent", "playful", "protective", "confident", "aggressive", "obedience"
+
 
 
 const dogs = [
@@ -32,7 +33,7 @@ const dogs = [
         good_with_cats: true,
         good_with_dogs: true,
         temperament: [
-            "Active", "Playful", "Curious", "Loyal"
+            "confident", "playful", "protective", "docile"
         ],
         good_with_kids: false,
         good_with_elderly: true,
@@ -51,7 +52,7 @@ const dogs = [
         good_with_cats: false,
         good_with_dogs: true,
         temperament: [
-            "Sociable", "Affectionate", "Energetic", "Curious"
+            "confident", "obedience", "energetic", "protective"
         ],
         good_with_kids: false,
         good_with_elderly: true,
@@ -70,7 +71,7 @@ const dogs = [
         good_with_cats: true,
         good_with_dogs: false,
         temperament: [
-            "Sociable", "Affectionate", "Energetic", "Curious"
+            "confident", "obedience", "energetic", "docile"
         ],
         good_with_kids: true,
         good_with_elderly: true,
