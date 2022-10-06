@@ -86,13 +86,13 @@ app.get('/cats/:id', (req, res) => {
         
         throw "Not a valid input"
 
-    } else if (id < 0 || id >= dogs.length){
+    } else if (id < 0 || id >= cats.length){
         
         throw "Index out of range"
 
     }
 
-    res.send(dogs[id]);
+    res.send(cats[id]);
   
   }catch (e) {
     res.status(404).send({ error: e });
