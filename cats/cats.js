@@ -8,7 +8,9 @@ const cats = [
         age: 5,
         good_with_cats: true,
         good_with_dogs: true,
-        temperament: ["Intelligent", "Friendly", "Affectionate", "Inquisitive"],
+        temperament: [
+            "Intelligent", "Friendly", "Affectionate", "Curious"
+    ],
         good_with_kids: true,
         good_with_elderly: true,
         good_with_strangers: true,
@@ -16,8 +18,7 @@ const cats = [
         hypoallergenic: true,
         health_status: "Healthy",
         house_cat: true
-    }, 
-    {
+    }, {
         id: 1,
         type: "cat",
         gender: "male",
@@ -26,7 +27,9 @@ const cats = [
         age: 6,
         good_with_cats: false,
         good_with_dogs: false,
-        temperament: ["Sociable", "Affectionate", "Energetic", "Lively"],
+        temperament: [
+            "Sociable", "Affectionate", "Energetic", "Lively"
+        ],
         good_with_kids: true,
         good_with_elderly: true,
         good_with_strangers: false,
@@ -34,8 +37,7 @@ const cats = [
         hypoallergenic: true,
         health_status: "Healthy",
         house_cat: false
-    },
-    {
+    }, {
         id: 2,
         type: "cat",
         gender: "female",
@@ -44,7 +46,9 @@ const cats = [
         age: 3,
         good_with_cats: true,
         good_with_dogs: false,
-        temperament: ["Intelligent", "Sociable", "Energetic", "Lively"],
+        temperament: [
+            "Intelligent", "Sociable", "Energetic", "Lively"
+        ],
         good_with_kids: false,
         good_with_elderly: false,
         good_with_strangers: false,
@@ -52,8 +56,7 @@ const cats = [
         hypoallergenic: true,
         health_status: "Healthy",
         house_cat: false
-    }, 
-    {
+    }, {
         id: 3,
         type: "cat",
         gender: "male",
@@ -62,7 +65,9 @@ const cats = [
         age: 10,
         good_with_cats: true,
         good_with_dogs: false,
-        temperament: ["Intelligent", "Curious", "Sociable", "Affectionate"],
+        temperament: [
+            "Intelligent", "Curious", "Sociable", "Affectionate"
+        ],
         good_with_kids: true,
         good_with_elderly: true,
         good_with_strangers: true,
@@ -70,8 +75,7 @@ const cats = [
         hypoallergenic: false,
         health_status: "Healthy",
         house_cat: true
-    }, 
-    {
+    }, {
         id: 4,
         type: "cat",
         gender: "male",
@@ -80,16 +84,17 @@ const cats = [
         age: 8,
         good_with_cats: false,
         good_with_dogs: true,
-        temperament: ["Active", "Curious", "Lively"],
+        temperament: [
+            "Active", "Curious", "Lively"
+        ],
         good_with_kids: false,
         good_with_elderly: true,
         good_with_strangers: false,
         independent: true,
         hypoallergenic: false,
-        health_status: true,
+        health_status: "Healthy",
         house_cat: false
-    }, 
-    {
+    }, {
         id: 5,
         type: "cat",
         gender: "female",
@@ -98,7 +103,9 @@ const cats = [
         age: 7,
         good_with_cats: true,
         good_with_dogs: true,
-        temperament: ["Loyal", "Affectionate"],
+        temperament: [
+            "Loyal", "Affectionate"
+        ],
         good_with_kids: false,
         good_with_elderly: false,
         good_with_strangers: false,
@@ -106,8 +113,7 @@ const cats = [
         hypoallergenic: false,
         health_status: "Diabetic",
         house_cat: true
-    }, 
-    {
+    }, {
         id: 6,
         type: "cat",
         gender: "female",
@@ -116,7 +122,9 @@ const cats = [
         age: 12,
         good_with_cats: true,
         good_with_dogs: false,
-        temperament: ["Active", "Curious", "Lively"],
+        temperament: [
+            "Active", "Curious", "Lively"
+        ],
         good_with_kids: true,
         good_with_elderly: false,
         good_with_strangers: false,
@@ -124,8 +132,7 @@ const cats = [
         hypoallergenic: true,
         health_status: "Healthy",
         house_cat: false
-    }, 
-    {
+    }, {
         id: 7,
         type: "cat",
         gender: "female",
@@ -134,7 +141,9 @@ const cats = [
         age: 6,
         good_with_cats: false,
         good_with_dogs: false,
-        temperament: ["Playful", "Loyal", "Friendly", "Affectionate"],
+        temperament: [
+            "Playful", "Loyal", "Friendly", "Affectionate"
+        ],
         good_with_kids: true,
         good_with_elderly: true,
         good_with_strangers: true,
@@ -142,8 +151,7 @@ const cats = [
         hypoallergenic: true,
         health_status: "Healthy",
         house_cat: true
-    }, 
-    {
+    }, {
         id: 8,
         type: "cat",
         gender: "male",
@@ -152,7 +160,9 @@ const cats = [
         age: 13,
         good_with_cats: false,
         good_with_dogs: false,
-        temperament: ["Social", "Affectionate", "Intelligent", "Playful"],
+        temperament: [
+            "Sociable", "Affectionate", "Intelligent", "Playful"
+        ],
         good_with_kids: false,
         good_with_elderly: false,
         good_with_strangers: false,
@@ -160,8 +170,7 @@ const cats = [
         hypoallergenic: true,
         health_status: "Healthy",
         house_cat: false
-    }, 
-    {
+    }, {
         id: 9,
         type: "cat",
         gender: "female",
@@ -170,7 +179,9 @@ const cats = [
         age: 9,
         good_with_cats: true,
         good_with_dogs: false,
-        temperament: ["Active", "Intelligent", "Playful", "Curious"],
+        temperament: [
+            "Active", "Intelligent", "Playful", "Curious"
+        ],
         good_with_kids: true,
         good_with_elderly: true,
         good_with_strangers: true,
@@ -178,8 +189,7 @@ const cats = [
         hypoallergenic: false,
         health_status: "Healthy",
         house_cat: true
-    }, 
-    {
+    }, {
         id: 10,
         type: "cat",
         gender: "male",
@@ -188,16 +198,21 @@ const cats = [
         age: 12,
         good_with_cats: true,
         good_with_dogs: true,
-        temperament: ["Active", "Intelligent", "Playful", "Curious"],
+        temperament: [
+            "Active", "Intelligent", "Playful", "Curious"
+        ],
         good_with_kids: true,
         good_with_elderly: true,
         good_with_strangers: true,
         independent: false,
-        hypoallergenic: 'No',
+        hypoallergenic: false,
         health_status: "Gingivitis",
         house_cat: true
     }
-
+   
 ]
 
 module.exports = cats;
+
+// console.log(cats)
+

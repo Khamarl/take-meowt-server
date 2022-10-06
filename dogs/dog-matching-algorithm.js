@@ -6,15 +6,7 @@
 
 // TODO Return the filtered and sorted list
 
-const {
-    temperamentAccomScoreGrid,
-    temperamentHouseMatesScoreGrid,
-    temperamentChildrenScoreGrid,
-    temperamentWFHScoreGrid,
-    temperamentExpScoreGrid,
-    temperamentPetNumScoreGrid,
-    exerciseScoreGrid
-} = require('./scoring-grids');
+const {temperamentAccomScoreGrid, temperamentHouseMatesScoreGrid, temperamentChildrenScoreGrid, temperamentWFHScoreGrid, temperamentExpScoreGrid, temperamentPetNumScoreGrid, exerciseScoreGrid} = require('./dog-scoring-grids');
 
 function petMatchingAlgorithm(animal, formData) {
     let score = 0;
@@ -268,7 +260,7 @@ function sortAnimals(animals, formData) { // Deep copy the animal list
     // For each animal, assign a score
     animalsCopy.forEach(animal => animal.score = petMatchingAlgorithm(animal, formData));
     // Sort by score, highest to lowest
-    animalsCopy.sort((a, b) => b - a);
+    animalsCopy.sort((a, b) => b.score - a.score);
 
     return animalsCopy;
 }
