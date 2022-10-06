@@ -24,7 +24,7 @@ function catMatchingAlgorithm(animal, formData) {
         score += (animal.health_status === "Healthy") ? 0.6 : 0.4
     }
     
-    const userAccom = formData.accomodation;
+    const userAccom = formData.accommodation;
     const userPets = formData.number_of_pets;
     if(userAccom === "house-garden" || userAccom === "house-no-garden"){
         if (userPets > 0){
@@ -158,7 +158,7 @@ const cats = require('./cats');
 testUser = {
     birthDate: "1940-10-04",
     location: "city",
-    accomodation: "house-no-garden",
+    accommodation: "house-no-garden",
     housemates: 3, 
     travel: 'Every month', 
     work_home: 'no',

@@ -86,7 +86,7 @@ const path = require("path");
 // ]
 
 const dogs = []
-for (let i = 0; i<50; i++) {
+for (let i = 0; i<10; i++) {
     const newDog = generateRandomDog();
     newDog.id = i;
     dogs.push(newDog);
@@ -94,6 +94,6 @@ for (let i = 0; i<50; i++) {
 
 const dogData = JSON.stringify(dogs);
 
-fs.writeFileSync(path.resolve(__dirname, "./dog-data.txt"), dogData);
+fs.writeFileSync(path.resolve(__dirname, "../dog-data.txt"), dogData);
 
 module.exports = dogs;

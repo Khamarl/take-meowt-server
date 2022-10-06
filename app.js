@@ -19,6 +19,8 @@ const cats = JSON.parse(catData);
 const dogData = fs.readFileSync(path.resolve(__dirname, "./dogs/dog-data.txt"));
 const dogs = JSON.parse(dogData);
 
+const sortedList = require('./dogs/dog-matching-algorithm') 
+
 // Welcome page
 app.get('/', (req, res) => {
   res.send(
@@ -34,7 +36,8 @@ app.get('/dogs', (req, res) => {
 
 app.post('/dogs', (req, res) => {
   console.log(req.body);
-  res.status(200).send(req.body);
+  const sortedDogs = sortedList(dogs, req.body);
+  res.status(200).send(sortedDogs);
 });
 
 app.get('/dogs/:id', (req, res) => {
