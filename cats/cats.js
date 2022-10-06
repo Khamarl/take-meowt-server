@@ -215,4 +215,3 @@ const cats = [
 module.exports = cats;
 
 // console.log(cats)
-
