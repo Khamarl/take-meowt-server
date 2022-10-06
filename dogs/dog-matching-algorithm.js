@@ -169,7 +169,7 @@ function sortAnimals(animals, formData) {
     // For each animal, assign a score
     animalsCopy.forEach(animal => animal.score = petMatchingAlgorithm(animal, formData));
     // Sort by score, highest to lowest
-    animalsCopy.sort((a, b) => b - a);
+    animalsCopy.sort((a, b) => b.score - a.score);
 
     return animalsCopy;
 }

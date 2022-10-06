@@ -113,15 +113,6 @@ function catMatchingAlgorithm(animal, formData) {
         animal.temperament.forEach(trait => score += temperamentExpScoreGrid[trait]["No"])
     }
 
-    // const userCurrentPets = formData.number_of_pets;
-    // if (userCurrentPets > 0){
-    //     score += animal.good_with_cats ? 0.6 : 0.3;
-    //     score += animal.good_with_dogs ? 0.6 : 0.3;
-    //     animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait][">0"]);
-    // } else {
-    //     score += 0.5;
-    //     animal.temperament.forEach(trait => score += temperamentPetNumScoreGrid[trait]["=0"]);
-    // }
 
     const userAllergy = formData.cat_allergy;
     if (userAllergy === 'yes'){
@@ -130,7 +121,7 @@ function catMatchingAlgorithm(animal, formData) {
         score += 0.5;
     }
 
-    const userCatMedication = formData.data_allergy;
+    const userCatMedication = formData.medication;
     if (userCatMedication === 'yes'){
         score += (animal.health_status === 'Healthy') ? 0.5 : 0.7
     } else {
@@ -156,13 +147,13 @@ function sortedAnimals(animals, formData) {
     // For each animal, assign a score
     animalsCopy.forEach(animal => animal.score = catMatchingAlgorithm(animal, formData));
     // Sort by score, highest to lowest
-    animalsCopy.sort((a, b) => b - a);
+    animalsCopy.sort((a, b) => b.score - a.score);
 
     return animalsCopy;
 }
 
 
-const cats = require("./cats");
+const cats = require('./cats');
 
 testUser = {
     birthDate: "1940-10-04",
@@ -174,6 +165,7 @@ testUser = {
     cat_experience: 'yes', 
     number_of_pets: 0,
     cat_allergy: 'yes', 
+    medication: 'yes',
     preference: 'yes'
 }
 

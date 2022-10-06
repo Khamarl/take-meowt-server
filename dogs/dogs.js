@@ -83,3 +83,5 @@ const dogs = [
 ]
 
 module.exports =  dogs;
+
+// console.log(dogs)
