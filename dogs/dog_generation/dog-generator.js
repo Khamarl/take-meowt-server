@@ -18,23 +18,23 @@ const breedList = [
 ]
 
 const traits = [
-    "Active",
-    "Intelligent",
-    "Playful",
-    "Curious",
-    "Loyal",
-    "Friendly",
-    "Sociable",
-    "Affectionate",
-    "Energetic",
-    "Lively"
+    "confident",
+    "intelligent",
+    "playful",
+    "docile",
+    "obedience",
+    "friendly",
+    "sociable",
+    "affectionate",
+    "energetic",
+    "aggressive"
 ]
 
 const healthConditions = ["Healthy", "Diabetic", "Gingivitis"]
 
 const weeklyExerciseHours = ["[0, 3.5)", "[3.5, 7)", "[7, 10.5)", "[10.5, 14)"];
 
-const sizes = ["Small", "Medium", "Large"];
+const sizes = ["small", "medium", "large"];
 
 function generateRandomDog() {
     const dog = {};
