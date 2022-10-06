@@ -6,7 +6,7 @@
 
 // TODO Return the filtered and sorted list
 
-const {temperamentAccomScoreGrid, temperamentHouseMatesScoreGrid, temperamentChildrenScoreGrid, temperamentWFHScoreGrid, temperamentExpScoreGrid, temperamentPetNumScoreGrid, exerciseScoreGrid} = require('./scoring-grids');
+const {temperamentAccomScoreGrid, temperamentHouseMatesScoreGrid, temperamentChildrenScoreGrid, temperamentWFHScoreGrid, temperamentExpScoreGrid, temperamentPetNumScoreGrid, exerciseScoreGrid} = require('./dog-scoring-grids');
 
 function petMatchingAlgorithm(animal, formData) {
     let score = 0;
