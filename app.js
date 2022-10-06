@@ -37,7 +37,6 @@ app.post('/dogs', (req, res) => {
   console.log(req.body);
   const sortedDogs = sortedList(dogs, req.body);
   res.status(200).send(sortedDogs);
-  console.log(sortedDogs);
 });
 
 app.get('/dogs/:id', (req, res) => {
