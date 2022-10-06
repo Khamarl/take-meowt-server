@@ -13,7 +13,7 @@ const app = express();
 
 middleSetup(app);
 
-const cats = require('./cats');
+const cats = require('./cats/cats');
 const dogData = fs.readFileSync("./dog-data.txt");
 const dogs = JSON.parse(dogData);
 
