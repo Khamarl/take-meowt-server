@@ -25,7 +25,7 @@ function catMatchingAlgorithm(animal, formData) {
     }
     
     const userAccom = formData.accommodation;
-    const userPets = formData.number_of_pets;
+    const userPets = formData.numberOfPets;
     if(userAccom === "house-garden" || userAccom === "house-no-garden"){
         if (userPets > 0){
             score += animal.good_with_cats ? 0.6 : 0.4;
@@ -52,7 +52,7 @@ function catMatchingAlgorithm(animal, formData) {
 
     if (userHouseOccupancy < 4){
         if (animal.health_status === 'Healthy'){
-            score += animal.independent ? 0.65 : 0.35
+            score += animal.independent ? 0.75 : 0.35
         } else {
             score += animal.independent ? 0.55 : 0.45
         }
@@ -69,7 +69,7 @@ function catMatchingAlgorithm(animal, formData) {
         score += animal.good_with_kids ? 0.7 : 0.1
         animal.temperament.forEach(trait => score += temperamentChildrenScoreGrid[trait][">0"]);
     } else {
-        score += 0.5
+        score += animal.good_with_kids ? 0.3 : 0.6
         animal.temperament.forEach(trait => score += temperamentChildrenScoreGrid[trait]["=0"]);
     }
 
@@ -83,7 +83,7 @@ function catMatchingAlgorithm(animal, formData) {
     }
 
 
-    const userWork = formData.work_home;
+    const userWork = formData.workHome;
     
     if (userWork === 'yes'){
         if (animal.health_status === 'Healthy'){
@@ -103,7 +103,7 @@ function catMatchingAlgorithm(animal, formData) {
 
     // // console.log("After both exercise questions: ", score);
 
-    const userPrevExperience = formData.pet_experience;
+    const userPrevExperience = formData.catExperience;
    
     if (userPrevExperience === 'yes'){
         score += (animal.health_status === 'Healthy') ? 0.5 : 0.8;
@@ -114,14 +114,14 @@ function catMatchingAlgorithm(animal, formData) {
     }
 
 
-    const userAllergy = formData.cat_allergy;
+    const userAllergy = formData.catAllergy;
     if (userAllergy === 'yes'){
         score += animal.hypoallergenic ? 0.7 : 0.1;
     } else {
         score += 0.5;
     }
 
-    const userCatMedication = formData.medication;
+    const userCatMedication = formData.catMeds;
     if (userCatMedication === 'yes'){
         score += (animal.health_status === 'Healthy') ? 0.5 : 0.7
     } else {
@@ -129,11 +129,11 @@ function catMatchingAlgorithm(animal, formData) {
     }
 
 
-    const userPreference = formData.preference;
+    const userPreference = formData.houseCat;
     if (userPreference === 'yes'){
-        score += animal.house_cat ? 0.8 : 0.3
+        score += animal.house_cat ? 0.7 : 0.3
     } else {
-        score += animal.house_cat ? 0.5 : 0.6
+        score += animal.house_cat ? 0.3 : 0.7
     }
 
     return score
@@ -169,4 +169,6 @@ testUser = {
     preference: 'yes'
 }
 
-console.log(sortedAnimals(cats, testUser));
+//console.log(sortedAnimals(cats, testUser));
+
+module.exports = sortedAnimals;
