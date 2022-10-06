@@ -14,7 +14,8 @@ const app = express();
 
 middleSetup(app);
 
-const cats = require(path.resolve(__dirname, './cats/cats'));
+const catData = fs.readFileSync(path.resolve(__dirname, "./cats/cat-data.txt"));
+const cats = JSON.parse(catData);
 const dogData = fs.readFileSync(path.resolve(__dirname, "./dogs/dog-data.txt"));
 const dogs = JSON.parse(dogData);
 
