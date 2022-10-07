@@ -270,23 +270,23 @@ function sortAnimals(animals, formData) { // Deep copy the animal list
     return animalsCopy;
 }
 
-const dogs = require("./dog_generation/dogs");
+// const dogs = require("./dog_generation/dogs");
 
-testUser = {
-    birthDate: "1940-10-04",
-    location: "city",
-    accommodation: "house-no-garden",
-    housemates: 3,
-    children: 2, 
-    travel: 'Every month', 
-    exercise: 'few-times-month',
-    walks: 'yes',
-    workHome: 'no',
-    dogExperience: 'yes', 
-    numberOfPets: 0,
-    dogAllergy: 'no', 
-    dogMeds: 'yes'
-}
+// testUser = {
+//     birthDate: "1940-10-04",
+//     location: "city",
+//     accommodation: "house-no-garden",
+//     housemates: 3,
+//     children: 2, 
+//     travel: 'Every month', 
+//     exercise: 'few-times-month',
+//     walks: 'yes',
+//     workHome: 'no',
+//     dogExperience: 'yes', 
+//     numberOfPets: 0,
+//     dogAllergy: 'no', 
+//     dogMeds: 'yes'
+// }
 
 //console.log(sortAnimals(dogs, testUser));
 

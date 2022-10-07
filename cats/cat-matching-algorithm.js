@@ -153,21 +153,21 @@ function sortedAnimals(animals, formData) {
 }
 
 
-const cats = require('./cats');
+// const cats = require('./cats');
 
-testUser = {
-    birthDate: "1940-10-04",
-    location: "city",
-    accommodation: "house-no-garden",
-    housemates: 3, 
-    travel: 'Every month', 
-    work_home: 'no',
-    cat_experience: 'yes', 
-    number_of_pets: 0,
-    cat_allergy: 'yes', 
-    medication: 'yes',
-    preference: 'yes'
-}
+// testUser = {
+//     birthDate: "1940-10-04",
+//     location: "city",
+//     accommodation: "house-no-garden",
+//     housemates: 3, 
+//     travel: 'Every month', 
+//     work_home: 'no',
+//     cat_experience: 'yes', 
+//     number_of_pets: 0,
+//     cat_allergy: 'yes', 
+//     medication: 'yes',
+//     preference: 'yes'
+// }
 
 //console.log(sortedAnimals(cats, testUser));
 
