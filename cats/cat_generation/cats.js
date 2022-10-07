@@ -209,15 +209,15 @@
 //         health_status: "Gingivitis",
 //         house_cat: true
 //     }
-   
+
 // ]
 
-const { generateRandomCat } = require("./cat-generator");
+const {generateRandomCat} = require("./cat-generator");
 const fs = require("fs");
 const path = require("path");
 
 const cats = []
-for (let i = 0; i<50; i++) {
+for (let i = 0; i < 10; i++) {
     const newCat = generateRandomCat();
     newCat.id = i;
     cats.push(newCat);
@@ -230,4 +230,3 @@ fs.writeFileSync(path.resolve(__dirname, "../cat-data.txt"), catData);
 module.exports = cats;
 
 // console.log(cats)
-
