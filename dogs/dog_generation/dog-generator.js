@@ -45,7 +45,7 @@ function generateRandomDog() {
     dog.breed = randomElement(breedList);
     dog.gender = randomBoolean() ? "female" : "male";
     dog.name = (dog.gender === "male") ? randomFileLine(path.resolve(__dirname, "male_dog_names.txt")) : randomFileLine(path.resolve(__dirname, "female_dog_names.txt"));
-    dog.age = randomInteger(0, 20);
+    dog.age = randomInteger(1, 20);
     dog.good_with_cats = randomBoolean();
     dog.good_with_dogs = randomBoolean();
     dog.temperament = [];

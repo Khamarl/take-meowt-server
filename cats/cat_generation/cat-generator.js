@@ -46,7 +46,7 @@ function generateRandomCat() {
     cat.breed = randomElement(breedList);
     cat.gender = randomBoolean() ? "female" : "male";
     cat.name = (cat.gender === "male") ? randomFileLine(path.resolve(__dirname, "male_cat_names.txt")) : randomFileLine(path.resolve(__dirname, "female_cat_names.txt"));
-    cat.age = randomInteger(0, 20);
+    cat.age = randomInteger(1, 20);
     cat.good_with_cats = randomBoolean();
     cat.good_with_dogs = randomBoolean();
     cat.temperament = [];
